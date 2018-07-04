@@ -1,0 +1,95 @@
+* Trees
+** Binary tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Binary_tree
+:END:
+A binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.
+*** Binary search tree
+A binary search tree is a rooted binary tree, whose internal nodes each store a key (and optionally, an associated value) and each have two distinguished sub-trees, commonly denoted left and right. The tree additionally satisfies the binary search property, which states that the key in each node must be greater than or equal to any key stored in the left sub-tree, and less than or equal to any key stored in the right sub-tree.
+**** Self balancing
+A self-balancing (or height-balanced) BST is one that automatically keeps its height small in the face of arbitrary item insertions or deletions.
+***** AVL tree
+***** Red–black tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Red%E2%80%93black_tree
+:END:
+Each node of the binary tree has an extra bit, and that bit is often interpreted as the color (red or black) of the node. These color bits are used to ensure the tree remains approximately balanced during insertions and deletions
+***** AA tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/AA_tree
+:END:
+AA trees are a variation of the red-black tree, a form of binary search tree which supports efficient addition and deletion of entries
+***** Scapegoat tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Scapegoat_tree
+:END:
+Unlike most other self-balancing binary search trees which provide worst case O(log n) lookup time, scapegoat trees have no additional per-node memory overhead compared to a regular binary search tree: a node stores only a key and two pointers to the child nodes. This makes scapegoat trees easier to implement and, due to data structure alignment, can reduce node overhead by up to one-third.
+***** Splay tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Splay_tree
+:END:
+A splay tree is a self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again.
+***** Weight-balanced tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Weight-balanced_tree
+:END:
+Weight-balanced binary trees (WBTs) are a type self-balancing binary search trees that can be used to implement dynamic sets, dictionaries (maps) and sequences
+***** Treap
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Treap
+:END:
+The treap and the randomized binary search tree are two closely related forms of binary search tree data structures that maintain a dynamic set of ordered keys and allow binary searches among the keys. After any sequence of insertions and deletions of keys, the shape of the tree is a random variable with the same probability distribution as a random binary tree; in particular, with high probability its height is proportional to the logarithm of the number of keys, so that each search, insertion, or deletion operation takes logarithmic time to perform.
+***** WAVL tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/WAVL_tree
+:END:
+A WAVL tree or weak AVL tree is a self-balancing binary search tree. WAVL trees are named after AVL trees, another type of balanced search tree, and are closely related both to AVL trees and red–black trees, which all fall into a common framework of rank balanced trees. Like other balanced binary search trees, WAVL trees can handle insertion, deletion, and search operations in time O(log n) per operation.
+**** Order statistic tree
+An order statistic tree is a variant of the binary search tree (or more generally, a B-tree[1]) that supports two additional operations beyond insertion, lookup and deletion:
+ - Select(i) — find the i'th smallest element stored in the tree
+ - Rank(x) – find the rank of element x in the tree, i.e. its index in the sorted list of elements of the tree
+**** Tango tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Tango_tree
+:END:
+Tango trees work by partitioning a binary search tree into a set of preferred paths, which are themselves stored in auxiliary trees (so the tango tree is represented as a tree of trees).
+*** Pagoda
+A pagoda is a priority queue implemented with a variant of a binary tree. The root points to its children, as in a binary tree. Every other node points back to its parent and down to its leftmost (if it is a right child) or rightmost (if it is a left child) descendant leaf. The basic operation is merge or meld, which maintains the heap property. An element is inserted by merging it as a singleton. The root is removed by merging its right and left children. Merging is bottom-up, merging the leftmost edge of one with the rightmost edge of the other
+*** Threaded binary tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Threaded_binary_tree
+:END:
+A threaded binary tree is a binary tree variant that allows fast traversal: given a pointer to a node in a threaded tree, it is possible to cheaply find its in-order successor (and/or predecessor).
+*** Top tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Top_tree
+:END:
+A top tree is a data structure based on a binary tree for unrooted dynamic trees that is used mainly for various path-related operations. It allows simple divide-and-conquer algorithms. It has since been augmented to maintain dynamically various properties of a tree such as diameter, center and median.
+** N-ary search tree
+*** B-Tree
+A B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time.
+*** 2-3 tree
+Every node with children (internal node) has either two children (2-node) and one data element or three children (3-nodes) and two data elements
+[[https://ysangkok.github.io/js-clrs-btree/btree.html][2–3 Tree Visualization]]
+*** Left-child right-sibling binary tree
+*Representing N-ary using Binary trees*
+
+In a binary tree that represents a multi-way tree T, each node corresponds to a node in T and has two pointers: one to the node's first child, and one to its next sibling in T. The children of a node thus form a singly-linked list.
+** Cartesian tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Cartesian_tree
+:END:
+A Cartesian tree is a binary tree derived from a sequence of numbers; it can be uniquely defined from the properties that it is heap-ordered and that a symmetric (in-order) traversal of the tree returns the original sequence.
+** Rope
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Rope_(data_structure)
+:END:
+A rope, or cord, is a data structure composed of smaller strings that is used to efficiently store and manipulate a very long string. For example, a text editing program may use a rope to represent the text being edited, so that operations such as insertion, deletion, and random access can be done efficiently
+** Index tree data structure
+*** B-Tree
+A B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time.
+*** T-tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/T-tree
+:END:
+A T-tree is a balanced index tree data structure optimized for cases where both the index and the actual data are fully kept in memory, just as a B-tree is an index structure optimized for storage on block oriented secondary storage devices like hard disks. T-trees seek to gain the performance benefits of in-memory tree structures such as AVL trees while avoiding the large storage space overhead which is common to them.

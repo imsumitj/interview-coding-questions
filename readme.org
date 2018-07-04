@@ -1,0 +1,11 @@
+* Overview
+Creating a repository for coding interview questions.
+* Structure
+- Project type: Maven project.
+* Questions
+** General [Easy]
+1. [[file:src/main/java/problem/algo/easy/JudgeCircleRoute.java::public%20class%20JudgeCircleRoute%20{][Judge Circle Route]]
+** Data structures
+*** [[file:notes/data-structure/trees.org::*Trees][Trees]]
+**** BST
+1. [[file:src/main/java/problem/datastructure/trees/bst/BinarySearchTree.java::public%20class%20BinarySearchTree<T%20extends%20Comparable<T>>%20{][Binary Search Tree]]
