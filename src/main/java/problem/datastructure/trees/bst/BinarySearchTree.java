@@ -62,7 +62,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      */
     public String toGraphViz() {
         return "digraph g {\n" +
-            "node [shape = record,height=.1];\n" +
+            "node [shape = Mrecord,height=.1];\n" +
             root.toGraphviz() +
             "}";
     }

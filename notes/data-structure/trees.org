@@ -65,6 +65,11 @@ A threaded binary tree is a binary tree variant that allows fast traversal: give
 :URL:      https://en.wikipedia.org/wiki/Top_tree
 :END:
 A top tree is a data structure based on a binary tree for unrooted dynamic trees that is used mainly for various path-related operations. It allows simple divide-and-conquer algorithms. It has since been augmented to maintain dynamically various properties of a tree such as diameter, center and median.
+*** Cartesian tree
+:PROPERTIES:
+:URL:      https://en.wikipedia.org/wiki/Cartesian_tree
+:END:
+A Cartesian tree is a binary tree derived from a sequence of numbers; it can be uniquely defined from the properties that it is heap-ordered and that a symmetric (in-order) traversal of the tree returns the original sequence.
 ** N-ary search tree
 *** B-Tree
 A B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time.
@@ -75,11 +80,6 @@ Every node with children (internal node) has either two children (2-node) and on
 *Representing N-ary using Binary trees*
 
 In a binary tree that represents a multi-way tree T, each node corresponds to a node in T and has two pointers: one to the node's first child, and one to its next sibling in T. The children of a node thus form a singly-linked list.
-** Cartesian tree
-:PROPERTIES:
-:URL:      https://en.wikipedia.org/wiki/Cartesian_tree
-:END:
-A Cartesian tree is a binary tree derived from a sequence of numbers; it can be uniquely defined from the properties that it is heap-ordered and that a symmetric (in-order) traversal of the tree returns the original sequence.
 ** Rope
 :PROPERTIES:
 :URL:      https://en.wikipedia.org/wiki/Rope_(data_structure)
@@ -93,3 +93,17 @@ A B-tree is a self-balancing tree data structure that keeps data sorted and allo
 :URL:      https://en.wikipedia.org/wiki/T-tree
 :END:
 A T-tree is a balanced index tree data structure optimized for cases where both the index and the actual data are fully kept in memory, just as a B-tree is an index structure optimized for storage on block oriented secondary storage devices like hard disks. T-trees seek to gain the performance benefits of in-memory tree structures such as AVL trees while avoiding the large storage space overhead which is common to them.
+** Questions
+1. Implement a BST with insert and delete functions
+2. Print a tree using BFS and DFS
+3. Write a function that determines if a tree is a BST
+4. Find the smallest element in a BST
+5. Find the 2nd largest number in a BST
+6. Given a binary tree which is a sum tree (child nodes add to parent), write an algorithm to determine whether the tree is a valid sum tree
+7. Find the distance between 2 nodes in a BST and a normal binary tree
+8. Print the coordinates of every node in a binary tree, where root is 0,0
+9. Print a tree by levels
+10. Given a binary tree which is a sum tree, write an algorithm to determine whether the tree is a valid sum tree
+11. Given a tree, verify that it contains a subtree.
+12. **HARD**: Find the max distance between 2 nodes in a BST.
+13. **HARD**: Construct a BST given the pre-order and in-order traversal Strings
