@@ -107,3 +107,6 @@ A T-tree is a balanced index tree data structure optimized for cases where both 
 11. Given a tree, verify that it contains a subtree.
 12. **HARD**: Find the max distance between 2 nodes in a BST.
 13. **HARD**: Construct a BST given the pre-order and in-order traversal Strings
+* Leetcode
+1. https://leetcode.com/problems/russian-doll-envelopes/description/
+2. https://leetcode.com/problems/longest-increasing-subsequence/description/
