@@ -4,7 +4,6 @@ import static com.google.common.base.Preconditions.checkArgument;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.ToString;
 
 /**
  * Node structure for Binary Tree which contain data of type <T>.

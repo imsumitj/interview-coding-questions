@@ -15,10 +15,11 @@ import java.util.Optional;
 public class BinarySearchTree<T extends Comparable<T>> {
 
     @NonNull
-    private final BinaryTreeNode<T> root;
+    private final BinaryTreeNodes<T> root;
+
 
     BinarySearchTree(final T data) {
-        root = new BinaryTreeNode<T>(data);
+        root = new BinaryTreeNodes<T>(data);
     }
 
     /**
@@ -47,15 +48,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     /**
-     * Returns JSON representation of the tree.
-     *
-     * @return JSON string
-     */
-    public String toJson() {
-        return root.toJson();
-    }
-
-    /**
      * Returns GraphViz representation of the tree.
      *
      * @return GraphViz
@@ -68,7 +60,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // recursively searches through the tree
-    private Optional<BinaryTreeNode<T>> findNode(@NonNull final T data, final BinaryTreeNode<T> currentNode) {
+    private Optional<BinaryTreeNodes<T>> findNode(@NonNull final T data, final BinaryTreeNodes<T> currentNode) {
         if (currentNode == null) {
             return Optional.empty();
         }
@@ -83,19 +75,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // Recursive call
-    private void add(final T data, final BinaryTreeNode<T> currentNode) {
+    private void add(final T data, final BinaryTreeNodes<T> currentNode) {
         if (shouldGoRight(data, currentNode)) { // root node is greater than the new node.
-            if (currentNode.isRightNodePresent()) {
+            if (currentNode.getRightNode() != null) {
                 add(data, currentNode.getRightNode());
             } else {
-                final BinaryTreeNode<T> newNode = new BinaryTreeNode<>(data);
+                final BinaryTreeNodes<T> newNode = new BinaryTreeNodes<>(data);
                 currentNode.setRightNode(newNode);
             }
         } else if (shouldGoLeft(data, currentNode)) {
-            if (currentNode.isLeftNodePresent()) {
+            if (currentNode.getLeftNode() != null) {
                 add(data, currentNode.getLeftNode());
             } else {
-                final BinaryTreeNode<T> newNode = new BinaryTreeNode<>(data);
+                final BinaryTreeNodes<T> newNode = new BinaryTreeNodes<>(data);
                 currentNode.setLeftNode(newNode);
             }
         } else {
@@ -103,11 +95,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    private boolean shouldGoRight(final T newNode, final BinaryTreeNode<T> currentNode) {
+    private boolean shouldGoRight(final T newNode, final BinaryTreeNodes<T> currentNode) {
         return currentNode.getData().compareTo(newNode) < 0;
     }
 
-    private boolean shouldGoLeft(final T newNode, final BinaryTreeNode<T> currentNode) {
+    private boolean shouldGoLeft(final T newNode, final BinaryTreeNodes<T> currentNode) {
         return currentNode.getData().compareTo(newNode) > 0;
     }
 }
